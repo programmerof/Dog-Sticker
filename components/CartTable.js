@@ -42,7 +42,7 @@ function CartTable({ cart }) {
                   width={64}
                   className={`hidden sm:inline-flex`}
                 />
-                <Link passHref href={`/products/${item.productHandle}`}>
+                <Link passHref href={`/products/${item.productHandle}`} legacyBehavior>
                   <a className="pt-1 hover:text-palette-dark">
                     {item.productTitle}, {item.variantTitle}
                   </a>

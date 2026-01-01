@@ -14,7 +14,7 @@ function ProductCard({ product }) {
     <Link
       href={`/products/${handle}`}
       passHref
-    >
+     legacyBehavior>
       <a className="h-120 w-72 rounded shadow-lg mx-auto border border-palette-lighter">
         <div className="h-72 border-b-2 border-palette-lighter relative">
           <Image
