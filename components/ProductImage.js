@@ -22,13 +22,13 @@ function ProductImage({ images }) {
         />
       </div>
       <div className="relative flex border-t border-palette-lighter">
-        <button
-          aria-label="left-scroll"
-          className="h-32 bg-palette-lighter hover:bg-palette-light  absolute left-0 z-10 opacity-75"
-          onClick={() => scroll(-300)}
-        >
-          <FontAwesomeIcon icon={faArrowLeft} className="w-3 mx-1 text-palette-primary" />
-        </button>
+       <button
+  aria-label="left-scroll"
+  className="h-32 bg-palette-primary/90 hover:bg-palette-primary text-white absolute left-0 z-10 px-3 rounded-r-lg transition-all duration-200"
+  onClick={() => scroll(-300)}
+>
+  <FontAwesomeIcon icon={faArrowLeft} className="w-4" />
+</button>
         <div
           ref={ref}
           style={{ scrollBehavior: "smooth" }}

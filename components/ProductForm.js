@@ -10,12 +10,13 @@ function ProductForm({ title, handle, variants, setVariantPrice, mainImg }) {
   const isLoading = useCartContext()[2]
   const addToCart = useAddToCartContext()
 
-  const atcBtnStyle = isLoading ?
-    `pt-3 pb-2 bg-palette-primary text-white w-full mt-2 rounded-sm font-primary font-semibold text-xl flex 
-                      justify-center items-baseline  hover:bg-palette-dark opacity-25 cursor-none`
-    :
-    `pt-3 pb-2 bg-palette-primary text-white w-full mt-2 rounded-sm font-primary font-semibold text-xl flex 
-                      justify-center items-baseline  hover:bg-palette-dark`
+ // Update the button className:
+const atcBtnStyle = isLoading ?
+  `pt-3 pb-2 bg-palette-primary text-white w-full mt-2 rounded-lg font-primary font-semibold text-xl flex 
+  justify-center items-center hover:bg-palette-dark transition-all duration-200 opacity-50 cursor-not-allowed`
+  :
+  `pt-3 pb-2 bg-palette-primary text-white w-full mt-2 rounded-lg font-primary font-semibold text-xl flex 
+  justify-center items-center hover:bg-palette-dark hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200`
 
   function handleSizeChange(e) {
     setVariantId(e)

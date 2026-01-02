@@ -21,8 +21,8 @@ function CartTable({ cart }) {
   }
 
   return (
-    <div className="min-h-80 max-w-2xl my-4 sm:my-8 mx-auto w-full">
-      <table className="mx-auto">
+<div className="min-h-80 max-w-4xl my-4 sm:my-8 mx-auto w-full bg-white rounded-lg shadow-md p-6">
+  <table className="w-full">
         <thead>
           <tr className="uppercase text-xs sm:text-sm text-palette-primary border-b border-palette-light">
             <th className="font-primary font-normal px-6 py-4">Product</th>

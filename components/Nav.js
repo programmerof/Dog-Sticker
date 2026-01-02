@@ -30,24 +30,22 @@ function Nav() {
           </a>
         </Link>
         <div>
-          <Link
-            href="/cart"
-            passHref
-           legacyBehavior>
-            <a className=" relative" aria-label="cart">
-              <FontAwesomeIcon className="text-palette-primary w-6 m-auto" icon={faShoppingCart} />
-              {
-                cartItems === 0 ?
-                  null
-                  :
-                  <div
-                    className="absolute top-0 right-0 text-xs bg-yellow-300 text-gray-900 font-semibold rounded-full py-1 px-2 transform translate-x-10 -translate-y-3"
-                  >
-                    {cartItems}
-                  </div>
-              }
-            </a>
-          </Link>
+          {/* // Update the cart section: */}
+<Link href="/cart" passHref legacyBehavior>
+  <a className="relative group" aria-label="cart">
+    <div className="p-2 rounded-full hover:bg-palette-lighter transition-colors duration-200">
+      <FontAwesomeIcon 
+        className="text-palette-primary w-6 h-6 group-hover:scale-110 transition-transform" 
+        icon={faShoppingCart} 
+      />
+      {cartItems > 0 && (
+        <div className="absolute -top-1 -right-1 bg-palette-primary text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
+          {cartItems}
+        </div>
+      )}
+    </div>
+  </a>
+</Link>
         </div>
       </div>
     </header >
